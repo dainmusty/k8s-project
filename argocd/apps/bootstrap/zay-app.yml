@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: zay-app
+  name: argocd
   namespace: zayapp
 spec:
   project: default
