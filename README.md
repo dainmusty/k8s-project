@@ -20,8 +20,11 @@ kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.7.9/manif
 
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 kubectl get pods -n argocd
+
+# Port Forwarding to access Argocd UI 
 kubectl port-forward svc/argocd-server -n argocd 8080:80
 
+# Get Argocd Password
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 --decode
 
 3. Install nginx alb controller
