@@ -1,20 +1,20 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: zay-app
-  namespace: argocd
-spec:
-  project: default
-  source:
-    repoURL: https://github.com/dainmusty/k8s-project.git
-    targetRevision: main
-    path: argocd/apps/workloads/zay
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: zayapp
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: zay-app
+#   namespace: argocd
+# spec:
+#   project: default
+#   source:
+#     repoURL: https://github.com/dainmusty/k8s-project.git
+#     targetRevision: main
+#     path: argocd/apps/workloads/zay
+#   destination:
+#     server: https://kubernetes.default.svc
+#     namespace: zayapp
+#   syncPolicy:
+#     automated:
+#       prune: true
+#       selfHeal: true
+#     syncOptions:
+#       - CreateNamespace=true
